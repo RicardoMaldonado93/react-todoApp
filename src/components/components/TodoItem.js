@@ -8,19 +8,34 @@ export const TodoItem = React.memo(({ todo, index, handleDelete, handleToggle })
             className="list-group-item"
             key={todo.id}
         >
+            <div className="flex-row item">
+                <div className="flex-column index">
+                    <p> {index + 1}. </p>
+                </div>
 
-            <p
-                className={`${todo.done && 'complete'}`}
-                onClick={() => handleToggle(todo.id)}
-            >
-                {index + 1}. {todo.desc}
-            </p>
+                <div className="flex-column text">
+                    <p
+                        className={`${todo.done && 'complete'} task`}
+                        onClick={() => handleToggle(todo.id)}
+                    >
+                    {todo.desc}
+                    </p>
+
+                </div>
+
+            </div>
 
             <button
-                className="btn btn-danger"
+                className="btn btn-danger btn-standard"
                 onClick={() => handleDelete(todo.id)}
             >
                 Borrar
+            </button>
+            <button
+                className="btn btn-danger btn-small"
+                onClick={() => handleDelete(todo.id)}
+            >
+                X
             </button>
         </li>
     )

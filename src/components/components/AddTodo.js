@@ -28,7 +28,7 @@ export const AddTodo = ({ handleAddTodo }) => {
 
     return (
         <>
-            <h4>Agregar TODO</h4>
+            <h4 className="add-todo">Agregar TODO</h4>
             <hr />
 
             <form onSubmit={handleSubmit}>

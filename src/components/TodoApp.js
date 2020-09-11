@@ -45,11 +45,11 @@ export const TodoApp = () => {
     return (
         <div>
             <div className="row">
-                <div className="col-8">
+                <div className="col-7">
                     <h1>TODO App </h1>
                 </div>
                 
-                <div className="col-4 task-counter">
+                <div className="col-5 task-counter">
                     <h4>task: ({todos.length})</h4>
                 </div>
             </div>
